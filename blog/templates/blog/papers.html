@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block css_styles %}
+    <link rel="stylesheet" href="{% static 'blog/main.css' %}">
+{% endblock css_styles %}
+
+
+{% block content %}
+    <div class="container d-flex flex-row ">
+        <div class="row">
+            <div class="col-lg-6 d-flex flex-column justify-content-start ">
+                <div class="pt-5 d-flex flex-column flex-wrap col">
+                    <p>    
+                        I am a Junior DevOps Engineer. I mainly dedicate my time to learn new techniques for managing and configuring widely used enterprise level applications such as Confluence, Bitbucket, Jira. I can create Data Centers in Cluster mode for each of these applications. In this blog, I will be sharing the application of installation, manangement, upgrading and configuring Linux and Windows servers for Bitbucket, Confluence, Jira and Jenkins and many more...
+                    </p>
+                    <p>
+                        When I am not in front of my screen. I usually spend time with teaching math, meeting some friends and reading...
+                    </p>
+                </div>
+                <div class="pt-5 d-flex flex-column flex-wrap col">
+                    {% for post in posts %}
+                            <a href="{{post.post_link}}" class="text-decoration-none">
+                                <div class="col">
+                                    <div class="card border-0">
+                                        <div class="card-header p-0 border-0 m-0 mb-3 ">
+                                            <p>{{post.title}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
