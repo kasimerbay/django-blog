@@ -1,0 +1,36 @@
+*{font-family: monospace;}
+
+.header_name{
+  font-size: xx-large;
+  padding-left: 1%;
+}
+
+.nav-link{
+  color: rgb(37, 37, 37);
+  margin-bottom: 5px;
+}
+
+.nav-link:hover{
+  margin-bottom: 0px;
+  padding-bottom: 0;
+  color: black;
+}
+
+.card-header{
+  background-color: white;
+  font-size: larger;
+  
+}
+
+header div p{
+  text-decoration: none;
+}
+
+.card:hover{
+  border: 1px solid black;
+}
+
+.card-body:hover{
+  border: 1px solid black;
+}
+

@@ -17,7 +17,7 @@ content = {
 def papers(request):
         papers = Paper.objects.all()
         infos = Contact.objects.all()
-        return render(request, "blog/papers.html", {"content":content,"posts":papers, "infos":infos})
+        # return render(request, "blog/papers.html", {"content":content,"posts":papers, "infos":infos})
         try:
             papers = Paper.objects.all()
             return render(request, "blog/papers.html", {"content":content,"posts":papers})
